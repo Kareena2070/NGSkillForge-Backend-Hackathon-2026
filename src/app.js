@@ -11,5 +11,8 @@ app.get('/', (req, res)=>{
     res.send("Backend is running")
 })
 
+const courseRoutes = require("./routes/course.routes");
+app.use("/api/courses", courseRoutes);
+
 app.use(errorMiddleware);
 module.exports = app;
